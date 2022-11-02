@@ -4,7 +4,7 @@ This repository contains the [Postman Collection](/collection.json) for <https:/
 
 ## How can I use the Postman Collection?
 
-[Join our Postman Workspace](https://app.getpostman.com/join-team?invite_code=11d96ef847bd25f1c04a9408315616a1&target_code=adee3442f301b5a04d7c12051ea32cb2). When the API is updated, the Workspace will auto-update.
+[Join our Postman Workspace](https://www.postman.com/galactic-rocket-335272/workspace/fern-phyllo). When the API is updated, the Workspace will auto-update.
 
 ## What is a Postman Collection?
 
