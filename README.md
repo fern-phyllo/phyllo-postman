@@ -1,6 +1,6 @@
 # Phyllo API Postman Collection
 
-This repository contains a [Postman Collection](https://learning.postman.com/docs/sending-requests/intro-to-collections/) for <https://docs.getphyllo.com/docs/api-reference>.
+This repository contains the [Postman Collection](/collection.json) for <https://docs.getphyllo.com/docs/api-reference>.
 
 ## How can I use the Postman Collection?
 
