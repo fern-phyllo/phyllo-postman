@@ -15,5 +15,5 @@ jobs:
         uses: fern-api/action-postman-sync@v1.1
         with:
           api-key: ${{ secrets.POSTMAN_API_KEY }}
-          workspace-id: ${{ secrets.POSTMAN_WORKSPACE_ID }}
+          workspace-id: ${{ secrets.POSTMAN_WORKSPACE }}
           collection-path: collection.json
