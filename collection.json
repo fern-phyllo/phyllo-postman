@@ -1,0 +1,583 @@
+{
+    "info": {
+        "name": "connect-api",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "variable": [
+        {
+            "key": "origin",
+            "value": "http://localhost:8080",
+            "type": "string"
+        },
+        {
+            "key": "username",
+            "value": "",
+            "type": "string"
+        },
+        {
+            "key": "password",
+            "value": "",
+            "type": "string"
+        }
+    ],
+    "auth": {
+        "basic": [
+            {
+                "key": "username",
+                "value": "{{username}}",
+                "type": "string"
+            },
+            {
+                "key": "password",
+                "value": "{{password}}",
+                "type": "string"
+            }
+        ],
+        "type": "basic"
+    },
+    "item": [
+        {
+            "name": "ConnectService",
+            "item": [
+                {
+                    "name": "getWorkPlatform",
+                    "request": {
+                        "url": {
+                            "raw": "{{origin}}/v1/work-platforms/:id",
+                            "host": [
+                                "{{origin}}"
+                            ],
+                            "path": [
+                                "v1",
+                                "work-platforms",
+                                ":id"
+                            ],
+                            "query": []
+                        },
+                        "header": [],
+                        "method": "GET"
+                    },
+                    "response": [
+                        {
+                            "name": "Successful getWorkPlatform",
+                            "code": 200,
+                            "originalRequest": {
+                                "url": {
+                                    "raw": "{{origin}}/v1/work-platforms/:id",
+                                    "host": [
+                                        "{{origin}}"
+                                    ],
+                                    "path": [
+                                        "v1",
+                                        "work-platforms",
+                                        ":id"
+                                    ],
+                                    "query": []
+                                },
+                                "header": [],
+                                "method": "GET"
+                            },
+                            "body": "{\n    \"created_at\": \"2022-11-02T20:03:29.326Z\",\n    \"updated_at\": \"2022-11-02T20:03:29.326Z\",\n    \"category\": \"MEDIA\",\n    \"status\": \"ACTIVE\",\n    \"url\": \"example\",\n    \"products\": {\n        \"identity\": {\n            \"is_supported\": true,\n            \"audience\": {\n                \"is_supported\": true\n            }\n        },\n        \"engagement\": {\n            \"is_supported\": true,\n            \"audience\": {\n                \"is_supported\": true\n            }\n        },\n        \"income\": {\n            \"is_supported\": true\n        },\n        \"switch\": {\n            \"is_supported\": true\n        }\n    }\n}",
+                            "_postman_previewlanguage": "json"
+                        }
+                    ]
+                },
+                {
+                    "name": "getAllWorkPlatforms",
+                    "request": {
+                        "url": {
+                            "raw": "{{origin}}/v1/work-platforms?limit=&name=&offset=",
+                            "host": [
+                                "{{origin}}"
+                            ],
+                            "path": [
+                                "v1",
+                                "work-platforms"
+                            ],
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": ""
+                                },
+                                {
+                                    "key": "name",
+                                    "value": ""
+                                },
+                                {
+                                    "key": "offset",
+                                    "value": ""
+                                }
+                            ]
+                        },
+                        "header": [],
+                        "method": "GET"
+                    },
+                    "response": [
+                        {
+                            "name": "Successful getAllWorkPlatforms",
+                            "code": 200,
+                            "originalRequest": {
+                                "url": {
+                                    "raw": "{{origin}}/v1/work-platforms?limit=&name=&offset=",
+                                    "host": [
+                                        "{{origin}}"
+                                    ],
+                                    "path": [
+                                        "v1",
+                                        "work-platforms"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "limit",
+                                            "value": ""
+                                        },
+                                        {
+                                            "key": "name",
+                                            "value": ""
+                                        },
+                                        {
+                                            "key": "offset",
+                                            "value": ""
+                                        }
+                                    ]
+                                },
+                                "header": [],
+                                "method": "GET"
+                            },
+                            "body": "{\n    \"data\": [\n        {\n            \"created_at\": \"2022-11-02T20:03:29.328Z\",\n            \"updated_at\": \"2022-11-02T20:03:29.328Z\",\n            \"category\": \"MEDIA\",\n            \"status\": \"ACTIVE\",\n            \"url\": \"example\",\n            \"products\": {\n                \"identity\": {\n                    \"is_supported\": true,\n                    \"audience\": {\n                        \"is_supported\": true\n                    }\n                },\n                \"engagement\": {\n                    \"is_supported\": true,\n                    \"audience\": {\n                        \"is_supported\": true\n                    }\n                },\n                \"income\": {\n                    \"is_supported\": true\n                },\n                \"switch\": {\n                    \"is_supported\": true\n                }\n            }\n        }\n    ],\n    \"metadata\": {\n        \"offset\": 0,\n        \"limit\": 0,\n        \"from_date\": \"example\",\n        \"to_date\": \"example\"\n    }\n}",
+                            "_postman_previewlanguage": "json"
+                        }
+                    ]
+                },
+                {
+                    "name": "getUser",
+                    "request": {
+                        "url": {
+                            "raw": "{{origin}}/v1/users/:id",
+                            "host": [
+                                "{{origin}}"
+                            ],
+                            "path": [
+                                "v1",
+                                "users",
+                                ":id"
+                            ],
+                            "query": []
+                        },
+                        "header": [],
+                        "method": "GET"
+                    },
+                    "response": [
+                        {
+                            "name": "Successful getUser",
+                            "code": 200,
+                            "originalRequest": {
+                                "url": {
+                                    "raw": "{{origin}}/v1/users/:id",
+                                    "host": [
+                                        "{{origin}}"
+                                    ],
+                                    "path": [
+                                        "v1",
+                                        "users",
+                                        ":id"
+                                    ],
+                                    "query": []
+                                },
+                                "header": [],
+                                "method": "GET"
+                            },
+                            "body": "{\n    \"external_id\": \"example\",\n    \"created_at\": \"2022-11-02T20:03:29.329Z\",\n    \"updated_at\": \"2022-11-02T20:03:29.329Z\",\n    \"status\": \"ACTIVE\"\n}",
+                            "_postman_previewlanguage": "json"
+                        }
+                    ]
+                },
+                {
+                    "name": "getAllUsers",
+                    "request": {
+                        "url": {
+                            "raw": "{{origin}}/v1/users?limit=&offset=",
+                            "host": [
+                                "{{origin}}"
+                            ],
+                            "path": [
+                                "v1",
+                                "users"
+                            ],
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": ""
+                                },
+                                {
+                                    "key": "offset",
+                                    "value": ""
+                                }
+                            ]
+                        },
+                        "header": [],
+                        "method": "GET"
+                    },
+                    "response": [
+                        {
+                            "name": "Successful getAllUsers",
+                            "code": 200,
+                            "originalRequest": {
+                                "url": {
+                                    "raw": "{{origin}}/v1/users?limit=&offset=",
+                                    "host": [
+                                        "{{origin}}"
+                                    ],
+                                    "path": [
+                                        "v1",
+                                        "users"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "limit",
+                                            "value": ""
+                                        },
+                                        {
+                                            "key": "offset",
+                                            "value": ""
+                                        }
+                                    ]
+                                },
+                                "header": [],
+                                "method": "GET"
+                            },
+                            "body": "{\n    \"data\": [\n        {\n            \"external_id\": \"example\",\n            \"created_at\": \"2022-11-02T20:03:29.329Z\",\n            \"updated_at\": \"2022-11-02T20:03:29.329Z\",\n            \"status\": \"ACTIVE\"\n        }\n    ],\n    \"metadata\": {\n        \"offset\": 0,\n        \"limit\": 0,\n        \"from_date\": \"example\",\n        \"to_date\": \"example\"\n    }\n}",
+                            "_postman_previewlanguage": "json"
+                        }
+                    ]
+                },
+                {
+                    "name": "createUser",
+                    "request": {
+                        "url": {
+                            "raw": "{{origin}}/v1/users",
+                            "host": [
+                                "{{origin}}"
+                            ],
+                            "path": [
+                                "v1",
+                                "users"
+                            ],
+                            "query": []
+                        },
+                        "header": [],
+                        "method": "POST",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"example\",\n    \"external_id\": \"example\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Successful createUser",
+                            "code": 200,
+                            "originalRequest": {
+                                "url": {
+                                    "raw": "{{origin}}/v1/users",
+                                    "host": [
+                                        "{{origin}}"
+                                    ],
+                                    "path": [
+                                        "v1",
+                                        "users"
+                                    ],
+                                    "query": []
+                                },
+                                "header": [],
+                                "method": "POST",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"example\",\n    \"external_id\": \"example\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "body": "{\n    \"external_id\": \"example\",\n    \"created_at\": \"2022-11-02T20:03:29.330Z\",\n    \"updated_at\": \"2022-11-02T20:03:29.330Z\",\n    \"status\": \"ACTIVE\"\n}",
+                            "_postman_previewlanguage": "json"
+                        }
+                    ]
+                },
+                {
+                    "name": "getUserByExernalId",
+                    "request": {
+                        "url": {
+                            "raw": "{{origin}}/v1/users/external_id/:external_id",
+                            "host": [
+                                "{{origin}}"
+                            ],
+                            "path": [
+                                "v1",
+                                "users",
+                                "external_id",
+                                ":external_id"
+                            ],
+                            "query": []
+                        },
+                        "header": [],
+                        "method": "GET"
+                    },
+                    "response": [
+                        {
+                            "name": "Successful getUserByExernalId",
+                            "code": 200,
+                            "originalRequest": {
+                                "url": {
+                                    "raw": "{{origin}}/v1/users/external_id/:external_id",
+                                    "host": [
+                                        "{{origin}}"
+                                    ],
+                                    "path": [
+                                        "v1",
+                                        "users",
+                                        "external_id",
+                                        ":external_id"
+                                    ],
+                                    "query": []
+                                },
+                                "header": [],
+                                "method": "GET"
+                            },
+                            "body": "{\n    \"external_id\": \"example\",\n    \"created_at\": \"2022-11-02T20:03:29.330Z\",\n    \"updated_at\": \"2022-11-02T20:03:29.330Z\",\n    \"status\": \"ACTIVE\"\n}",
+                            "_postman_previewlanguage": "json"
+                        }
+                    ]
+                },
+                {
+                    "name": "createSDKToken",
+                    "request": {
+                        "url": {
+                            "raw": "{{origin}}/v1/sdk-tokens",
+                            "host": [
+                                "{{origin}}"
+                            ],
+                            "path": [
+                                "v1",
+                                "sdk-tokens"
+                            ],
+                            "query": []
+                        },
+                        "header": [],
+                        "method": "POST",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"user_id\": \"example\",\n    \"products\": [\n        \"IDENTITY\"\n    ]\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Successful createSDKToken",
+                            "code": 200,
+                            "originalRequest": {
+                                "url": {
+                                    "raw": "{{origin}}/v1/sdk-tokens",
+                                    "host": [
+                                        "{{origin}}"
+                                    ],
+                                    "path": [
+                                        "v1",
+                                        "sdk-tokens"
+                                    ],
+                                    "query": []
+                                },
+                                "header": [],
+                                "method": "POST",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"user_id\": \"example\",\n    \"products\": [\n        \"IDENTITY\"\n    ]\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "body": "{\n    \"sdk_token\": \"example\",\n    \"expires_at\": \"2022-11-02T20:03:29.330Z\"\n}",
+                            "_postman_previewlanguage": "json"
+                        }
+                    ]
+                },
+                {
+                    "name": "getAccount",
+                    "request": {
+                        "url": {
+                            "raw": "{{origin}}/v1/accounts/:id",
+                            "host": [
+                                "{{origin}}"
+                            ],
+                            "path": [
+                                "v1",
+                                "accounts",
+                                ":id"
+                            ],
+                            "query": []
+                        },
+                        "header": [],
+                        "method": "GET"
+                    },
+                    "response": [
+                        {
+                            "name": "Successful getAccount",
+                            "code": 200,
+                            "originalRequest": {
+                                "url": {
+                                    "raw": "{{origin}}/v1/accounts/:id",
+                                    "host": [
+                                        "{{origin}}"
+                                    ],
+                                    "path": [
+                                        "v1",
+                                        "accounts",
+                                        ":id"
+                                    ],
+                                    "query": []
+                                },
+                                "header": [],
+                                "method": "GET"
+                            },
+                            "body": "{\n    \"id\": \"example\",\n    \"created_at\": \"2022-11-02T20:03:29.330Z\",\n    \"updated_at\": \"2022-11-02T20:03:29.330Z\",\n    \"user\": {\n        \"id\": \"example\",\n        \"name\": \"example\"\n    },\n    \"work_platform\": {\n        \"id\": \"example\",\n        \"name\": \"example\",\n        \"logo_url\": \"example\"\n    },\n    \"platform_username\": \"example\",\n    \"profile_pic_url\": \"example\",\n    \"status\": \"CONNECTED\",\n    \"platform_profile_name\": \"example\",\n    \"platform_profile_id\": \"example\",\n    \"platform_profile_published_at\": \"2022-11-02T20:03:29.330Z\",\n    \"data\": {\n        \"identity\": {\n            \"status\": \"SYNCED\",\n            \"last_sync_at\": \"2022-11-02T20:03:29.330Z\",\n            \"monitor_type\": \"STANDARD\",\n            \"audience\": {\n                \"status\": \"SYNCED\",\n                \"last_sync_at\": \"2022-11-02T20:03:29.331Z\",\n                \"monitor_type\": \"STANDARD\"\n            }\n        },\n        \"engagement\": {\n            \"status\": \"SYNCED\",\n            \"last_sync_at\": \"2022-11-02T20:03:29.331Z\",\n            \"refresh_since\": \"2022-11-02T20:03:29.331Z\",\n            \"data_available_from\": \"2022-11-02T20:03:29.331Z\",\n            \"monitor_type\": \"STANDARD\",\n            \"audience\": {\n                \"status\": \"SYNCED\",\n                \"last_sync_at\": \"2022-11-02T20:03:29.331Z\",\n                \"refresh_since\": \"2022-11-02T20:03:29.331Z\",\n                \"data_available_from\": \"2022-11-02T20:03:29.331Z\",\n                \"monitor_type\": \"STANDARD\"\n            }\n        },\n        \"income\": {\n            \"status\": \"SYNCED\",\n            \"last_sync_at\": \"2022-11-02T20:03:29.331Z\",\n            \"refresh_since\": \"2022-11-02T20:03:29.331Z\",\n            \"data_available_from\": \"2022-11-02T20:03:29.331Z\",\n            \"monitor_type\": \"STANDARD\"\n        }\n    }\n}",
+                            "_postman_previewlanguage": "json"
+                        }
+                    ]
+                },
+                {
+                    "name": "getAllAccounts",
+                    "request": {
+                        "url": {
+                            "raw": "{{origin}}/v1/accounts?limit=&offset=&user_id=&work_platform_id=",
+                            "host": [
+                                "{{origin}}"
+                            ],
+                            "path": [
+                                "v1",
+                                "accounts"
+                            ],
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": ""
+                                },
+                                {
+                                    "key": "offset",
+                                    "value": ""
+                                },
+                                {
+                                    "key": "user_id",
+                                    "value": ""
+                                },
+                                {
+                                    "key": "work_platform_id",
+                                    "value": ""
+                                }
+                            ]
+                        },
+                        "header": [],
+                        "method": "GET"
+                    },
+                    "response": [
+                        {
+                            "name": "Successful getAllAccounts",
+                            "code": 200,
+                            "originalRequest": {
+                                "url": {
+                                    "raw": "{{origin}}/v1/accounts?limit=&offset=&user_id=&work_platform_id=",
+                                    "host": [
+                                        "{{origin}}"
+                                    ],
+                                    "path": [
+                                        "v1",
+                                        "accounts"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "limit",
+                                            "value": ""
+                                        },
+                                        {
+                                            "key": "offset",
+                                            "value": ""
+                                        },
+                                        {
+                                            "key": "user_id",
+                                            "value": ""
+                                        },
+                                        {
+                                            "key": "work_platform_id",
+                                            "value": ""
+                                        }
+                                    ]
+                                },
+                                "header": [],
+                                "method": "GET"
+                            },
+                            "body": "{\n    \"data\": [\n        {\n            \"id\": \"example\",\n            \"created_at\": \"2022-11-02T20:03:29.343Z\",\n            \"updated_at\": \"2022-11-02T20:03:29.343Z\",\n            \"user\": {\n                \"id\": \"example\",\n                \"name\": \"example\"\n            },\n            \"work_platform\": {\n                \"id\": \"example\",\n                \"name\": \"example\",\n                \"logo_url\": \"example\"\n            },\n            \"platform_username\": \"example\",\n            \"profile_pic_url\": \"example\",\n            \"status\": \"CONNECTED\",\n            \"platform_profile_name\": \"example\",\n            \"platform_profile_id\": \"example\",\n            \"platform_profile_published_at\": \"2022-11-02T20:03:29.343Z\",\n            \"data\": {\n                \"identity\": {\n                    \"status\": \"SYNCED\",\n                    \"last_sync_at\": \"2022-11-02T20:03:29.344Z\",\n                    \"monitor_type\": \"STANDARD\",\n                    \"audience\": {\n                        \"status\": \"SYNCED\",\n                        \"last_sync_at\": \"2022-11-02T20:03:29.344Z\",\n                        \"monitor_type\": \"STANDARD\"\n                    }\n                },\n                \"engagement\": {\n                    \"status\": \"SYNCED\",\n                    \"last_sync_at\": \"2022-11-02T20:03:29.344Z\",\n                    \"refresh_since\": \"2022-11-02T20:03:29.344Z\",\n                    \"data_available_from\": \"2022-11-02T20:03:29.344Z\",\n                    \"monitor_type\": \"STANDARD\",\n                    \"audience\": {\n                        \"status\": \"SYNCED\",\n                        \"last_sync_at\": \"2022-11-02T20:03:29.344Z\",\n                        \"refresh_since\": \"2022-11-02T20:03:29.344Z\",\n                        \"data_available_from\": \"2022-11-02T20:03:29.344Z\",\n                        \"monitor_type\": \"STANDARD\"\n                    }\n                },\n                \"income\": {\n                    \"status\": \"SYNCED\",\n                    \"last_sync_at\": \"2022-11-02T20:03:29.344Z\",\n                    \"refresh_since\": \"2022-11-02T20:03:29.344Z\",\n                    \"data_available_from\": \"2022-11-02T20:03:29.344Z\",\n                    \"monitor_type\": \"STANDARD\"\n                }\n            }\n        }\n    ],\n    \"metadata\": {\n        \"offset\": 0,\n        \"limit\": 0,\n        \"from_date\": \"example\",\n        \"to_date\": \"example\"\n    }\n}",
+                            "_postman_previewlanguage": "json"
+                        }
+                    ]
+                },
+                {
+                    "name": "disconnectAccount",
+                    "request": {
+                        "url": {
+                            "raw": "{{origin}}/v1/accounts/:id/disconnect",
+                            "host": [
+                                "{{origin}}"
+                            ],
+                            "path": [
+                                "v1",
+                                "accounts",
+                                ":id",
+                                "disconnect"
+                            ],
+                            "query": []
+                        },
+                        "header": [],
+                        "method": "POST"
+                    },
+                    "response": [
+                        {
+                            "name": "Successful disconnectAccount",
+                            "code": 200,
+                            "originalRequest": {
+                                "url": {
+                                    "raw": "{{origin}}/v1/accounts/:id/disconnect",
+                                    "host": [
+                                        "{{origin}}"
+                                    ],
+                                    "path": [
+                                        "v1",
+                                        "accounts",
+                                        ":id",
+                                        "disconnect"
+                                    ],
+                                    "query": []
+                                },
+                                "header": [],
+                                "method": "POST"
+                            },
+                            "body": "{\n    \"id\": \"example\",\n    \"created_at\": \"2022-11-02T20:03:29.344Z\",\n    \"updated_at\": \"2022-11-02T20:03:29.344Z\",\n    \"user\": {\n        \"id\": \"example\",\n        \"name\": \"example\"\n    },\n    \"work_platform\": {\n        \"id\": \"example\",\n        \"name\": \"example\",\n        \"logo_url\": \"example\"\n    },\n    \"status\": \"CONNECTED\"\n}",
+                            "_postman_previewlanguage": "json"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
