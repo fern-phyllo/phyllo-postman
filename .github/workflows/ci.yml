@@ -14,6 +14,6 @@ jobs:
       - name: Publish Postman Collection
         uses: fern-api/action-postman-sync@v1.1
         with:
-          api-key: ${{ secrets.POSTMAN_API_KEY }}
-          workspace-id: ${{ secrets.POSTMAN_WORKSPACE }}
+          api-key: ${{ secrets.FERN_POSTMAN_API_KEY }}
+          workspace-id: ${{ secrets.FERN_POSTMAN_WORKSPACE_ID }}
           collection-path: collection.json
